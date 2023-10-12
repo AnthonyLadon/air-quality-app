@@ -1,0 +1,57 @@
+*,
+::before,
+::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.background-layer {
+  background-color: rgb(119, 218, 195);
+  height: 100vh;
+}
+
+.main-title {
+  font-size: 3rem;
+  font-family: "Roboto", sans-serif;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  padding: 2rem;
+}
+
+.mood-icon {
+  height: 5rem;
+  display: block;
+  margin: 1rem auto;
+}
+
+.city-info-container {
+  margin: 0 auto;
+  padding: 1rem;
+  border: 1px solid black;
+  border-radius: 15px;
+  width: 75%;
+}
+
+.scale-container {
+  display: flex;
+  position: relative;
+  width: 100%;
+}
+
+.scale-section {
+  height: 10px;
+  flex-grow: 1;
+  background-color: red;
+}
+
+.scale-section:not(:last-child) {
+  border-right: 2px solid white;
+}
+
+.pollution-cursor {
+  height: 2rem;
+  transform: rotate(180deg);
+  position: absolute;
+}

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Air Quality Index</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Roboto:wght@100;300;400;500;700;900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="background-layer">
+      <h1 class="main-title">Qualité de l'air dans ma ville</h1>
+      <div class="container">
+        <img src="ressources/happy.svg" alt="mood icon" class="mood-icon" />
+
+        <div class="city-info-container">
+          <h3 class="city-info">Voici la situation à 'Nom de la ville'</h3>
+          <table class="city-info-table">
+            <tr>
+              <th>Info pollution</th>
+              <td>Bon</td>
+            </tr>
+            <tr>
+              <th>Indice qualité de l'air</th>
+              <td>86</td>
+            </tr>
+          </table>
+
+          <div class="scale-container">
+            <img
+              src="ressources/location.svg"
+              alt="pollution cursor"
+              class="pollution-cursor"
+            />
+            <div class="scale-section"></div>
+            <div class="scale-section"></div>
+            <div class="scale-section"></div>
+            <div class="scale-section"></div>
+            <div class="scale-section"></div>
+            <div class="scale-section"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="main.js"></script>
+  </body>
+</html>
