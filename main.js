@@ -10,12 +10,15 @@ async function getCityDatas() {
   let humidityStatus = document.getElementById("humidity-status");
   let windSpeedStatus = document.getElementById("wind-speed-status");
   let cursor = document.getElementById("pollution-cursor");
+  let loader = document.getElementById("loader");
 
   try {
     const response = await fetch(
       "https://api.airvisual.com/v2/nearest_city?key=76fa60d1-6fdc-4ef9-9a0c-9dfa19eb9531"
     );
     const responseData = await response.json();
+
+    loader.classList.remove("active");
 
     const cityData = {
       city: responseData.data.city,
@@ -26,7 +29,7 @@ async function getCityDatas() {
     };
     console.log(cityData);
     // Display data on the DOM
-    citySituation.textContent = `Voici la situation à ${cityData.city}`;
+    citySituation.textContent = `Voici la qualité de l'air à ${cityData.city}`;
     airQualityIndex.textContent = cityData.pollution;
     temperatureStatus.textContent = `${cityData.temperature}°C`;
     humidityStatus.textContent = `${cityData.humidity}%`;
@@ -80,7 +83,11 @@ async function getCityDatas() {
         moodIcon.alt = "magnifying glass icon";
     }
   } catch (error) {
-    console.error(error);
+    loader.classList.remove("active");
+    moodIcon.src = "./ressources/browser.svg";
+    moodIcon.alt = "error icon";
+    citySituation.style.color = "red";
+    citySituation.textContent = error.message;
   }
 }
 
