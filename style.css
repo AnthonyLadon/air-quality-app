@@ -27,8 +27,9 @@
 }
 
 .city-info-container {
-  margin: 0 auto;
-  padding: 1rem;
+  background-color: beige;
+  margin: 2rem auto;
+  padding: 2rem 2rem 3rem 2rem;
   border: 1px solid black;
   border-radius: 15px;
   width: 75%;
@@ -39,6 +40,7 @@
 }
 
 .scale-container {
+  margin-top: 1.5rem;
   display: flex;
   position: relative;
   width: 100%;
@@ -47,7 +49,6 @@
 .scale-section {
   height: 10px;
   flex-grow: 1;
-  background-color: red;
 }
 
 .scale-section:not(:last-child) {
@@ -83,4 +84,5 @@
   height: 2rem;
   transform: rotate(180deg);
   position: absolute;
+  top: 6px;
 }
