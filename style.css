@@ -34,6 +34,10 @@
   width: 75%;
 }
 
+.city-info-table {
+  text-align: left;
+}
+
 .scale-container {
   display: flex;
   position: relative;

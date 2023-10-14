@@ -14,20 +14,38 @@
   </head>
   <body>
     <div class="background-layer">
-      <h1 class="main-title">Qualité de l'air à 'nom de ville'</h1>
+      <h1 class="main-title" id="city-situation">
+        Qualité de l'air dans votre ville
+      </h1>
       <div class="container">
-        <img src="ressources/happy.svg" alt="mood icon" class="mood-icon" />
+        <img
+          class="mood-icon"
+          id="mood-icon"
+          src="ressources/magnifying-glass.svg"
+          alt="manifying glass icon"
+        />
 
         <div class="city-info-container">
-          <h3 class="city-info">Voici la situation à 'Nom de la ville'</h3>
           <table class="city-info-table">
             <tr>
-              <th>Info pollution</th>
-              <td>Bon</td>
+              <th>Info pollution:</th>
+              <td id="pollution-status"></td>
             </tr>
             <tr>
-              <th>Indice qualité de l'air</th>
-              <td>86</td>
+              <th>Indice qualité de l'air:</th>
+              <td id="air-quality-index"></td>
+            </tr>
+            <tr>
+              <th>température:</th>
+              <td id="temperature-status"></td>
+            </tr>
+            <tr>
+              <th>humidité:</th>
+              <td id="humidity-status"></td>
+            </tr>
+            <tr>
+              <th>vitesse du vent:</th>
+              <td id="wind-speed-status"></td>
             </tr>
           </table>
 
