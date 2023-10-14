@@ -7,7 +7,7 @@
 }
 
 .background-layer {
-  background-color: rgb(119, 218, 195);
+  background-color: rgba(115, 229, 74, 0.301);
   height: 100vh;
 }
 
@@ -52,6 +52,31 @@
 
 .scale-section:not(:last-child) {
   border-right: 2px solid white;
+}
+
+.scale-section:nth-child(2) {
+  background-color: #00ff00;
+  flex-grow: 1;
+}
+.scale-section:nth-child(3) {
+  background-color: #ffff00;
+  flex-grow: 1;
+}
+.scale-section:nth-child(4) {
+  background-color: #ff7f00;
+  flex-grow: 1;
+}
+.scale-section:nth-child(5) {
+  background-color: #ff0000;
+  flex-grow: 1;
+}
+.scale-section:nth-child(6) {
+  background-color: #8b00ff;
+  flex-grow: 2;
+}
+.scale-section:nth-child(7) {
+  background-color: #7e0023;
+  flex-grow: 3;
 }
 
 .pollution-cursor {
