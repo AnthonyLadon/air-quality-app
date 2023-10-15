@@ -14,10 +14,17 @@ async function getCityDatas() {
 
   try {
     const response = await fetch(
-      "https://api.airvisual.com/v2/nearest_city?key=76fa60d1-6fdc-4ef9-9a0c-9dfa19eb9531"
+      "https://api.airvisual.com/v2/nearest_city?key=76f0d1-6fdc-4ef9-9a0c-9dfa19eb9531"
     );
-    const responseData = await response.json();
 
+    // gestion des erreurs coté client
+    console.log(response);
+    if (!response.ok) {
+      throw new Error(`Error ${response.status} ${response.statusText}`);
+    }
+
+    const responseData = await response.json();
+    // suppression du loader
     loader.classList.remove("active");
 
     const cityData = {
@@ -83,6 +90,7 @@ async function getCityDatas() {
         moodIcon.alt = "magnifying glass icon";
     }
   } catch (error) {
+    // gestion des erreurs de requête
     loader.classList.remove("active");
     moodIcon.src = "./ressources/browser.svg";
     moodIcon.alt = "error icon";
