@@ -14,7 +14,7 @@ async function getCityDatas() {
 
   try {
     const response = await fetch(
-      "https://api.airvisual.com/v2/nearest_city?key=76f0d1-6fdc-4ef9-9a0c-9dfa19eb9531"
+      "https://api.airvisual.com/v2/nearest_city?key=76fa60d1-6fdc-4ef9-9a0c-9dfa19eb9531"
     );
 
     // gestion des erreurs coté client
